@@ -1,1 +1,3 @@
-# Odin-Dom-Practice
+DOM-manipulation basic practice problems
+
+The Odin Project Foundation Dom-Manipulation
