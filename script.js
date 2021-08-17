@@ -1,3 +1,5 @@
+// Adding & Editing DOM
+
 const container = document.querySelector("#container");
 
 const content = document.createElement("div");
@@ -22,12 +24,55 @@ const newDiv = document.createElement("div");
 newDiv.style.border = "3px solid black";
 newDiv.style.backgroundColor = "pink";
 
-const newheading1 = document.createElement("h1");
-newheading1.textContent = "in a div";
-newDiv.appendChild(newheading1);
+const newHeadingOne = document.createElement("h1");
+newHeadingOne.textContent = "in a div";
+newDiv.appendChild(newHeadingOne);
 
-const newpara = document.createElement("p");
-newpara.textContent = "me too";
-newDiv.appendChild(newpara);
+const newPara = document.createElement("p");
+newPara.textContent = "me too";
+newDiv.appendChild(newPara);
 
 container.appendChild(newDiv);
+
+// Events
+
+const btn = document.querySelector("#btn");
+btn.onclick = () => alert("Hello World");
+
+const btnThree = document.querySelector("#btn3");
+btnThree.addEventListener("click", () => {
+  alert("hello world");
+});
+
+function alertFunction() {
+  alert("Yay! You Did It!");
+}
+
+// method event listener
+
+btn.addEventListener("click", alertFunction);
+
+btn.addEventListener("click", function (e) {
+  console.log(e);
+});
+
+btn.addEventListener("click", function (e) {
+  console.log(e.target);
+});
+
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "blue";
+});
+
+
+
+
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
